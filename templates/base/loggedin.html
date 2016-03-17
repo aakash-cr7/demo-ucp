@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+{% load material_form %}
+{% load staticfiles %}
+{% block pagetitle %} UCP | Home {% endblock %}
+{% block content %}
+{% include "base/navbar.html" %}
+
+    <div class="row" style="margin-top: 20px">
+        <div class="col s3 offset-s1 white logged-in-header z-depth-custom">
+            <h6 class="center-heading">Add Fav Topic</h6>
+            <form action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                {% form form=f1 %}{% endform %}
+                <div class="row">
+                    <div class="col s12">
+                        <br>
+                        <button type="submit" name="login" class="btn waves-effect waves-light left blue darken-1">Add Topic</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col s6 offset-s1 white logged-in-header z-depth-custom">
+
+            <p>Welcome, {{ request.user.username }} </p>
+
+        </div>
+    </div>
+
+{% endblock %}

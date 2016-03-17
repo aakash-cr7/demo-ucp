@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    {% load staticfiles %}
+    <head>
+        <title>{% block pagetitle %} Welcome to UCP {% endblock %}</title>
+        {% include 'material/includes/material_css.html' %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="{% static 'base/css/common.css' %}" rel="stylesheet" />
+        {% block extrahead %}{% endblock %}
+    </head>
+    <body>
+
+        {% block content %}{% endblock %}
+        
+        <script src="{% static 'base/js/jquery-2.1.4.min.js' %}"></script>
+        <script src="{% static 'material/js/jquery.datetimepicker.js' %}"></script>
+        <script src="{% static 'material/js/jquery.formset.js' %}"></script>
+        <script src="{% static 'material/js/materialize.js' %}"></script>
+        <script src="{% static 'material/js/material_init.js' %}"></script>
+        <script src="{% static 'base/js/common.js' %}"></script>
+        {% block morescripts %}{% endblock %}
+    </body>
+</html>

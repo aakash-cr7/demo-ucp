@@ -1,0 +1,121 @@
+body {
+    background-color: #ebebeb;
+}
+.center-heading {
+    text-align: center;
+    color: #757575;
+}
+
+.row {
+    margin-top: 20px;
+}
+.brand-logo {
+    font-size: 1.9rem;
+}
+i.material-icons {
+    margin-top: -7px;
+}
+.square {
+    border-radius: 4px;
+}
+.sub-nav {
+    height: 51px;
+    border-top: 1px solid #166DC3;
+}
+.brand-logo> img {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+.sub-nav-mobile {
+    /*line-height: 0;*/
+    height: 51px;
+}
+.sub-nav-mobile li, .sub-nav-mobile li a {
+    max-height: 51px;
+    line-height: 54px;
+
+}
+.sub-nav-mobile li:hover {
+    background: none;
+}
+.container
+ {
+    margin-top: 20px;
+}
+.login-btn {
+    margin-right: 10px;
+}
+#header-bg {
+    background: url('../images/college.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+    min-width: 100%;
+    margin: 0;
+    position: relative;
+}
+a.waves-effect:hover, ul.right li:hover {
+    background: none !important;
+}
+.sub-nav-mobile > li:after {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-top: -3px;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+.sub-nav-mobile  > li:hover:after {
+    width: 100%;
+    background: #fff;
+}
+li.selected:after {
+    width: 100%;
+    background: #fff;
+}
+.fa-chevron-circle-down {
+    font-size: 40px;
+    color: white;
+    /*display: block;*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 2px;
+}
+.row > .logged-in-header {
+    padding: 20px;
+}
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus, textarea.materialize-textarea:focus:not([readonly]),{
+     border-bottom: 1px solid #1976D2;
+     box-shadow: none;
+}
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus,
+.input-field input[type=number]:focus {
+    border-bottom: 1px solid #1976D2;
+    box-shadow: none;
+}
+
+[type="radio"].with-gap:checked + label:before {
+    border: 2px solid #1976D2;
+}
+[type="radio"].with-gap:checked + label:after {
+    border: 2px solid #1976D2;
+    background-color: #1976D2;
+}
+label.active {
+    color: #1976D2 !important;
+}
+.z-depth-custom {
+    box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}

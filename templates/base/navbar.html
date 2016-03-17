@@ -1,0 +1,55 @@
+{% load staticfiles %}
+<nav>
+     <div class="nav-wrapper  blue darken-2">
+       <a href="#" class="brand-logo center"><img alt="Brand" src="{% static 'base/images/UCB.jpg' %}"</a>
+       <ul class="right hide-on-med-and-down">
+           {% if request.user.is_authenticated %}
+           <li><li><a href="{% url 'logout' %}" class="waves-effect waves-light btn  blue darken-1">Log out</a></li></li>
+           {% else %}
+                {% if not request.get_full_path == '/account/login/' %}
+                <li><a class="waves-effect waves-light btn blue darken-1 login-btn" href="{% url 'login' %}">LOGIN</a></li>
+                {% endif %}
+                {% if not request.get_full_path == '/account/signup/' %}
+                <li><a class="waves-effect waves-light btn blue darken-1" href="{% url 'signup' %}">SIGN UP</a></li>
+                {% endif %}
+           {% endif %}
+       </ul>
+     </div>
+ </nav>
+ <nav class="sub-nav">
+      <div class="nav-wrapper blue darken-2">
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down sub-nav-mobile">
+            <!-- use template context processor for active nav item -->
+            <li {% if request.get_full_path == '/account/home/' %} class="selected" {% endif %}><a href="{% url 'home' %}">HOME </a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">EVENTS</a></li>
+            <li><a href="#">RESULTS</a></li>
+            <li><a href="#">EXAM SCHEDULE</a></li>
+            {% if request.user.is_authenticated %}
+            <li><a href="#">DISCUSSIONS</a></li>
+            <li><a href="#">RECRUITMENT DRIVE</a></li>
+            {% endif %}
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="{% url 'home' %}">HOME </a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">EVENTS</a></li>
+            <li><a href="#">RESULTS</a></li>
+            <li><a href="#">EXAM SCHEDULE</a></li>
+            {% if request.user.is_authenticated %}
+            <li class="selected"><a href="#">DISCUSSIONS</a></li>
+            <li><a href="#">RECRUITMENT DRIVE</a></li>
+            <li><li><a href="{% url 'logout' %}" class="waves-effect waves-light btn  blue darken-1">Log out</a></li></li>
+            {% else %}
+                {% if not request.get_full_path == '/account/login/' %}
+                <li><a href="{% url 'login' %}">LOGIN</a></li>
+                {% endif %}
+                {% if not request.get_full_path == '/account/signup/' %}
+                <li><a href="{% url 'signup' %}">SIGN UP</a></li>
+                {% endif %}
+            {% endif %}
+
+        </ul>
+      </div>
+ </nav>

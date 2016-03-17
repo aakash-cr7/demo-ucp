@@ -1,0 +1,15 @@
+Hello Moderator,
+
+A new {{ user_status }} has just signed up for UCP.
+Here are the details for the {{ user_status }} :
+First Name: {{ firstname }}
+Last Name: {{ lastname }}
+{% if user_status == 'Student' %}
+Enrollment Number: {{ unique_id }}
+{% else %}
+Staff Id: {{ unique_id }}
+{% endif %}
+Please verify the user from the moderator section on the UCP.
+
+Thanks,
+UCP Team

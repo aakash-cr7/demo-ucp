@@ -1,0 +1,31 @@
+{% extends 'base/base.html' %}
+{% load material_form %}
+{% block pagetitle %} UCP | Log in {% endblock %}
+{% block content %}
+{% include "base/navbar.html" %}
+<div class="row">
+    <div class="col s12 m8 l4 offset-m2 offset-l4">
+        <div class="card-panel">
+            <h4 class="center-heading">Log in</h4>
+            <form action="{% url 'login' %}" method="POST" id="login-form">
+                {% csrf_token %}
+                {% form form=form %}{% endform %}
+                <div class="row">
+                    <div class="col s12">
+                        <br>
+                        <button type="submit" name="login" class="btn waves-effect waves-light left blue darken-1" id="login-btn">Log in</button>
+                        <br><br>
+                        <a href="{% url 'forgot_password' %}">Forgot Password?</a><br>
+                        <a href="{% url 'signup' %}">Sign up?</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block morescripts %}
+<script>
+    UserLogin.init();
+</script>
+{% endblock %}

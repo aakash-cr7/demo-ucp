@@ -1,0 +1,8 @@
+Hello {{ username }},
+Thanks for signing up on UCP,
+You are just one step away from completing the sign up process. Just click on the link below to verify your account.
+
+{{ protocol }}://{{ domain }}{% url 'verify_email' uid=uid token=token %}
+
+Thanks,
+UCP Team

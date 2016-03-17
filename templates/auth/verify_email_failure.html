@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+{% block pagetitle %} UCP | Verification Failure {% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col s6 offset-s3 white ">
+        <h5>Invalid verification Link</h5>
+        <p> Either create a new account <a href="{% url 'signup' %}">Signup</a> or <a href="{% url 'login' %}">Login</a></p>
+    </div>
+</div>
+{% endblock %}

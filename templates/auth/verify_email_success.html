@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+{% block pagetitle %} UCP | Verification Complete {% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col s6 offset-s3 white ">
+        <h5> Account Successfully Verified</h5>
+        <p> Now you can proceed to <a href="{% url 'login' %}">Login</a>, or wait for the account approval by moderator/admin.</p>
+    </div>
+</div>
+{% endblock %}
