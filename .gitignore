@@ -87,5 +87,3 @@ media/
 # DS_Store
 .DS_Store
 
-#django settings file
-settings.py
